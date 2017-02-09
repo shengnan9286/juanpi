@@ -50,8 +50,8 @@
 	var app = angular.module('myapp',['ngRoute']);
 	app.config(['$routeProvider',function($routeProvider){
 		$routeProvider.when('/',{templateUrl:'html/indexDetail.html',controller:'con'})
-		.when('/home',{templateUrl:'html/market.html'})
-		.when('/global',{templateUrl:'html/fresh.html'})
+		.when('/home',{templateUrl:'html/home.html'})
+		.when('/global',{templateUrl:'html/global.html'})
 		.when('/shopcar',{templateUrl:'html/shopcar.html'})
 		.when('/mine',{templateUrl:'html/mine.html'})
 		.otherwise({redirectTo:'/'});
