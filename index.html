@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width= device-width,user-scalable=no'>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<script type="text/javascript" src='js/angular.js'></script>
+	<script type="text/javascript" src='js/angular-route.js'></script>
+</head>
+<body ng-app='myapp'>
+	<div ng-view></div>
+	<footer>
+		<ul>
+			<li>
+				<a href="#/">
+					<img src="img/logo1.png">
+					<p>今日折扣</p>
+				</a>
+			</li>
+			<li>
+				<a href="#/home">
+					<img src="img/logo2.png">
+					<p>居家馆</p>
+				</a>
+			</li>
+			<li>
+				<a href="#/global">
+					<img src="img/logo3.png">
+					<p>全球购</p>
+				</a>
+			</li>
+			<li>
+				<a href="#/shopcar">
+					<img src="img/logo4.png">
+					<p>购物车</p>
+				</a>
+			</li>
+			<li>
+				<a href="#/mine">
+					<img src="img/logo5.png">
+					<p>我的卷皮</p>
+				</a>
+			</li>
+		</ul>
+	</footer>
+</body>
+<script type="text/javascript">
+	//路由
+	var app = angular.module('myapp',['ngRoute']);
+	app.config(['$routeProvider',function($routeProvider){
+		$routeProvider.when('/',{templateUrl:'html/indexDetail.html',controller:'con'})
+		.when('/home',{templateUrl:'html/market.html'})
+		.when('/global',{templateUrl:'html/fresh.html'})
+		.when('/shopcar',{templateUrl:'html/shopcar.html'})
+		.when('/mine',{templateUrl:'html/mine.html'})
+		.otherwise({redirectTo:'/'});
+	}]);
+</script>
+</html>
