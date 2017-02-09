@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name='viewport' content='width=device-width,user-scalable=no'>
+	<meta name='viewport' content='width= device-width,user-scalable=no'>
 	<title>首页</title>
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<script type="text/javascript" src='js/angular.js'></script>
+	<script type="text/javascript" src='js/angular-route.js'></script>
 </head>
-<body>
+<body ng-app='myapp'>
+	<div ng-view></div>
 	<footer>
 		<ul>
 			<li>
@@ -42,5 +45,16 @@
 		</ul>
 	</footer>
 </body>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+	//路由
+	var app = angular.module('myapp',['ngRoute']);
+	app.config(['$routeProvider',function($routeProvider){
+		$routeProvider.when('/',{templateUrl:'html/indexDetail.html',controller:'con'})
+		.when('/home',{templateUrl:'html/market.html'})
+		.when('/global',{templateUrl:'html/fresh.html'})
+		.when('/shopcar',{templateUrl:'html/shopcar.html'})
+		.when('/mine',{templateUrl:'html/mine.html'})
+		.otherwise({redirectTo:'/'});
+	}]);
+</script>
 </html>
