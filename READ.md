@@ -1,0 +1,1 @@
+从一个简单的AngularServiceDemo去了解 Angular service的使用，并且实现控制器间不同作用域($scope)的相互通信。

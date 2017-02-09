@@ -1,0 +1,1 @@
+var arr=[1,2,3];arr.map(function(r){return r+1});

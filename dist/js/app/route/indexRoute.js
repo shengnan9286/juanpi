@@ -1,0 +1,1 @@
+angular.module("serviceDemo").config(["$routeProvider",function(e){e.when("/btn1",{templateUrl:"views/demo1.html"}).when("/btn2",{templateUrl:"views/demo2.html"}).otherwise({redirectTo:"/"})}]);

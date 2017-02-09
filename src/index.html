@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="serviceDemo">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/lib/angular.js"></script>
+    <script src="js/lib/angular-resource.js"></script>
+    <script src="js/lib/angular-route.js"></script>
+</head>
+<body>
+    <div class="well col-xs-4" ng-controller="createBtn">
+        <button class="btn btn-info btn-block" ng-repeat="btn in btns" ng-click="dispatchNewUrl(btn.url)">
+            {{btn.name}}
+        </button>
+    </div>
+    <div class="col-xs-8">
+        <div ng-view></div>
+    </div>
+
+</body>
+<script>
+</script>
+
+<!--应用控制器-->
+<script src="js/app/controller/createBtn.js"></script>
+<script src="js/app/controller/demo1Ctrl.js"></script>
+<script src="js/app/controller/demo2Ctrl.js"></script>
+
+<!--引入服务器-->
+<script src="js/app/services/indexService.js"></script>
+
+
+<!--引入路由器-->
+<script src="js/app/route/indexRoute.js"></script>
+
+
+
+</html>

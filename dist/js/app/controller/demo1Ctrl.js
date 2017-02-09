@@ -1,0 +1,1 @@
+angular.module("serviceDemo").controller("demo1Ctrl",["$scope",function(e){e.demo1Content="啊，多么美丽的,"}]);

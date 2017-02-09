@@ -1,0 +1,11 @@
+<div ng-controller="demo2Ctrl">
+    这里是 demo2 页面
+    <input type="text" ng-model="c">
+    <hr>
+    <button ng-click="sendInformation('broadCast', '那年，大明湖畔。。。')">发送广播信息</button>
+    <p>来自广播信息：{{c}}</p>
+</div>
+
+<div ng-controller="demo2SecondCtrl">
+    来自广播信息: {{c}}
+</div>

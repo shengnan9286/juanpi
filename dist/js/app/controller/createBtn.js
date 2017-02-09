@@ -1,0 +1,1 @@
+angular.module("serviceDemo",["ngRoute"]).controller("createBtn",["$scope","$location",function(n,t){var o=[{name:"I am first Button",url:"/btn1"},{name:"I am second Button",url:"/btn2"}];n.btns=o,n.dispatchNewUrl=function(n){console.log(n),t.path(n)}}]);
