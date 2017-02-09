@@ -1,0 +1,42 @@
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	font-size: 25.875px;
+	font-family: "微软雅黑";
+}
+li,ul{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+	color:black;	
+}
+footer{
+	width: 	100%;
+	position: fixed;
+	top:80%;
+	left: 0;
+	border-top: 1px solid rgb(245,245,245);
+}
+footer ul {
+	display: flex;
+	width: 100%;
+}
+footer ul li {
+	flex: 1;
+	text-align: center;
+}
+footer ul li a {
+	font-size: 0.31rem;
+	display: block;
+	position: relative;
+}
+footer ul li a img{
+	height: 1.3rem;
+	margin-top: 0.15rem;
+}
+footer ul li a p{
+	font-size: 0.5rem;
+}
