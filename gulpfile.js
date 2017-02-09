@@ -94,7 +94,7 @@ gulp.task('watch',function(){
 	// 监听 html
 	gulp.watch('src/**/*.html', ['html'])
 	// 监听 sacss
-	gulp.watch('src/sass/*.sass', ['sass']);
+	gulp.watch('src/sass/*.scss', ['sass']);
 	// 监听 images
 	gulp.watch('src/images/**/*.{png,jpg,gif,svg}', ['images']);
 	// 监听 js
@@ -108,7 +108,7 @@ gulp.task('sass', function(){
 	//expanded：没有缩进的、扩展的css代码。 
 	//compact：简洁格式的css代码。
 	//compressed：压缩后的css代码。
-	return sass('src/sass/*.sass', {style:'compact'})	
+	return sass('src/sass/*.scss', {style:'compact'})
 	//指示源文件路径、并进行文件匹配(style: 'compressed'表示输出格式)
 		.on('error', function(err){
 			console.log('编译sass出错%s', err.message);
@@ -119,19 +119,19 @@ gulp.task('sass', function(){
 			//cascade:false	//是否美化属性值
 		})]))*/
 		//.pipe(cssnano())
-		.pipe(gulp.dest('src/css'));	
+		.pipe(gulp.dest('src/sass'));
 		//输出路径
 });
 
 //CSS的压缩配置任务
 gulp.task('minify-css', () => {
-	return gulp.src('src/sass/*.css')
-		.pipe(gulp.dest('dist/css'))	
+	return gulp.src('src/sass/*.scss')
+		.pipe(gulp.dest('dist/sass'))
 })
 
 //添加CSS3前缀任务
 gulp.task('css3-prefix',() =>{
-	gulp.src('src/css/*.css')
+	gulp.src('src/sass/*.scss')
 		.pipe(postcss([autoprefixer({
 			 browsers: ['last 5 versions'],	
 			 //主流浏览器的最新两个版本
@@ -140,7 +140,7 @@ gulp.task('css3-prefix',() =>{
 			 remove:true	
 			 //去掉不必要的前缀
 		})]))
-		.pipe(gulp.dest('dist/css'));
+		.pipe(gulp.dest('dist/sass'));
 });
 
 
