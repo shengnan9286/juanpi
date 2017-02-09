@@ -3,8 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
-	home
+	<nav>
+		<h1 style="color:black;font-weight: normal;">居家馆 <img src="img/btn.png"></h1>
+		<ul>
+			<li>精选</li>
+			<li>百货</li>
+			<li>厨房</li>
+			<li>清洁</li>
+			<li style='flex:1;'>卫浴</li>
+		</ul>
+	</nav>
+	<div id="swiper">
+		<img src="http://s2.juancdn.com/bao/160918/3/c/57de4f38151ad189728b4613_750x290.jpg?iopcmd=convert&Q=80&dst=webp">
+	</div>
+	<div id="star">
+		<div><img src="http://s1.juancdn.com/bao/160921/2/3/57e24468151ad163488b45d2_375x456.jpg"></div>
+		<div><img src="http://s1.juancdn.com/bao/160921/a/e/57e243a1151ad1404a8b45b1_375x228.jpg"></div>
+		<div><img src="http://s1.juancdn.com/bao/160921/9/8/57e243b7151ad1284a8b45bf_375x228.jpg"></div>
+	</div>
+	<div class="showpic">
+		<img src="http://s1.juancdn.com/bao/160922/3/a/57e33d8d151ad1ff198b456a_750x360.jpg">
+		<img src="http://s2.juancdn.com/bao/160630/b/9/5774ed15151ad1c67a8b4603_632x60.jpg">
+	</div>
+	<!-- angular -->
+	<div id='homeAngular' ng-controller='homecon'>
+		<dl ng-repeat='obj in arr'>
+			<dt><img ng-src="{{obj.pic_url}}"></dt>
+			<dd>￥{{obj.cprice}} <span>￥{{obj.oprice}}</span><span>{{obj.time_left}}</span></dd>
+			<p>{{obj.title}}</p>
+		</dl>
+	</div>
+	<p id='bot'>亲！已经到底了！！！</p>
+	<br><br><br><br>
 </body>
 </html>

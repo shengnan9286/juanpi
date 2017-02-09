@@ -49,12 +49,38 @@
 	//路由
 	var app = angular.module('myapp',['ngRoute']);
 	app.config(['$routeProvider',function($routeProvider){
-		$routeProvider.when('/',{templateUrl:'html/indexDetail.html',controller:'con'})
-		.when('/home',{templateUrl:'html/home.html'})
+		$routeProvider.when('/',{templateUrl:'html/indexDetail.html',controller:'indexcon'})
+		.when('/home',{templateUrl:'html/home.html',controller:'homecon'})
 		.when('/global',{templateUrl:'html/global.html'})
 		.when('/shopcar',{templateUrl:'html/shopcar.html'})
 		.when('/mine',{templateUrl:'html/mine.html'})
 		.otherwise({redirectTo:'/'});
 	}]);
+</script>
+<script type="text/javascript">
+	//首页angular
+	var indexController = app.controller('indexcon',['$scope','$http',function($scope,$http){
+		$http({
+			url:'http://localhost:2046/1',
+			method:'get'
+		}).success(function(data){
+			// console.log(data);
+			$scope.arr = data.new.list;
+			console.log($scope.arr);
+		})
+	}])
+</script>
+<script type="text/javascript">
+	//home页angular
+	var indexController = app.controller('homecon',['$scope','$http',function($scope,$http){
+		$http({
+			url:'http://localhost:2046/2',
+			method:'get'
+		}).success(function(data){
+			// console.log(data);
+			$scope.arr = data.data.goods;
+			console.log($scope.arr);
+		})
+	}])
 </script>
 </html>
