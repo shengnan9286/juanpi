@@ -54,22 +54,83 @@ header .download p{
 	border-radius: 5px;
 	margin-top: 0.25rem;
 }
-/*nav*/
-nav{
+#swiper{
+	background-color: white;
+}
+#icons{
 	width: 100%;
-	
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	display: flex;
+	padding-bottom: 0.5rem;
+	background-color: white;
 }
-nav h1{
-	position: relative;
+#icons dl{
+	flex: 1;
 	text-align: center;
-	color: rgb(255,70,78);
-	height: 3.12rem;
-	line-height: 3.12rem; 
 }
-nav h1 img{
-	position: absolute;
-	right: 0;
-	top: 1rem; 
+#icons dl p{
+	font-size: 0.5rem;
+}
+
+#star{
+	width: 100%;
+	margin-top: 2rem;
+	overflow: hidden;
+}
+#star div:nth-child(1){
+	width: 50%;
+	float: left;
+}
+#star div:nth-child(1) img{
+	width: 100%;
+}
+#star div{
+	float: right;
+	width: 49.9%;
+}
+#star div img{
+	width: 100%;
+	float: left;
+}
+#mid_tip{
+	width: 100%;
+}
+#mid_tip img{
+	width: 100%;
+}
+
+#indexDetailAngular{
+	width: 100%;
+	background: white;
+	overflow: hidden;
+}
+#indexDetailAngular dl{
+	width: 49.5%;
+	float: left;
+	margin-right: 0.25%;
+	padding-bottom: 0.3rem;
+}
+#indexDetailAngular dl dt{
+	width: 100%;
+}
+#indexDetailAngular dl dt img{
+	width: 100%;
+}
+#indexDetailAngular dl dd {
+	font-size: 0.7rem;
+	color: red;
+	text-indent: 0.6rem;
+}
+#indexDetailAngular dl dd span{
+	font-size: 0.2rem;
+	color: #ccc;
+	float: right;
+	margin-top: 0.5rem;
+}
+#indexDetailAngular dl p{
+	font-size: 0.4rem;
+	color: rgb(116,116,116);
+	text-indent: 0.6rem;
+	padding: 0.2rem 0;
+	background: url(../img/a.png) no-repeat right bottom;
+	background-size: 8%;
 }

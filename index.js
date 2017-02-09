@@ -11,6 +11,14 @@ app.get('/', function (req,res){
     // res.send('你访问的首页');
     res.sendFile(__dirname+'/'+"index.html");
 });
+app.get('/1', function (req,res){
+    // res.send('你访问的首页');
+    res.sendFile(__dirname+'/'+"1.json");
+});
+app.get('/2', function (req,res){
+    // res.send('你访问的首页');
+    res.sendFile(__dirname+'/'+"2.json");
+});
 // app.get('/login', function(req,res){
 //     res.sendFile(__dirname+'/login.html');
 // });
