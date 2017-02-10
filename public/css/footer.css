@@ -13,12 +13,18 @@ a{
 	text-decoration: none;
 	color:black;	
 }
+body{
+	background: rgb(247,247,247) ;
+}
 footer{
 	width: 	100%;
 	position: fixed;
-	top:80%;
+	bottom:0;
 	left: 0;
 	border-top: 1px solid rgb(245,245,245);
+	background-color: white;
+	z-index: 999;
+	/*display: none;*/
 }
 footer ul {
 	display: flex;

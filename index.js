@@ -13,6 +13,7 @@ app.get('/', function (req,res){
     // res.send('你访问的首页');
     res.sendFile(__dirname+'/'+"index.html");
 });
+<<<<<<< HEAD
 
 app.get('/global/0', function (req, res) {
 	fs.readFile('data/global.json', function (err, data) {
@@ -21,6 +22,16 @@ app.get('/global/0', function (req, res) {
 		}
 	})
 })
+=======
+app.get('/1', function (req,res){
+    // res.send('你访问的首页');
+    res.sendFile(__dirname+'/'+"1.json");
+});
+app.get('/2', function (req,res){
+    // res.send('你访问的首页');
+    res.sendFile(__dirname+'/'+"2.json");
+});
+>>>>>>> b718722ad016531296a0e4867bed020dfb4e6234
 // app.get('/login', function(req,res){
 //     res.sendFile(__dirname+'/login.html');
 // });
