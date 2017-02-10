@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+const fs = require('fs');
+
 app.use(express.static('public'));
 
 app.all('*', function(req, res, next) {
@@ -11,6 +13,14 @@ app.get('/', function (req,res){
     // res.send('你访问的首页');
     res.sendFile(__dirname+'/'+"index.html");
 });
+
+app.get('/global/0', function (req, res) {
+	fs.readFile('data/global.json', function (err, data) {
+		if (!err) {
+			res.send(data);
+		}
+	})
+})
 // app.get('/login', function(req,res){
 //     res.sendFile(__dirname+'/login.html');
 // });
