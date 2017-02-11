@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="globalApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>globalbuy</title>
+    <link rel="stylesheet" href="../../sass/layout.css">
+    <script src="../../js/lib/angular.js"></script>
+    <script src="../../js/lib/angular-resource.js"></script>
+    <script src="../../js/lib/angular-route.js"></script>
+    <script src="../../js/app/controller/globalApp.js"></script>
+
+    <style>
+        div.swiper-item {
+            width: 100%;
+            height: 200%;
+        }
+        div.swiper-item img {
+            width:100%;
+            height: 100%;
+            border:2px solid green;
+        }
+
+    </style>
+</head>
+<body ng-controller="topLevelCtrl">
+    <header>
+        <div><span>全球购</span></div>
+        <!--<div class="user-search"><a href="" >search</a></div>-->
+    </header>
+    <section>
+        <article class="swiper" ng-controller="swiperCtrl">
+            <div class="swiper-item" ng-style="{'width':'200px','height':'200px'}" ng-repeat="item in swiperData.banner_ads">
+                1<!--<img alt="ad-img" title="ad-img" ng-src={{item.url}}>-->
+            </div>
+        </article>
+    </section>
+
+</body>
+</html>

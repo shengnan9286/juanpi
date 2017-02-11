@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/indexDetail.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 <body>
 	<header>
@@ -19,6 +20,49 @@
 	</header>
 	<nav>
 		<h1>卷皮 <img src="img/btn.png"></h1>
+		<ul>
+			<li>上新</li>
+			<li>女装</li>
+			<li>鞋包</li>
+			<li>母婴</li>
+			<li>居家数码</li>
+		</ul>
 	</nav>
+	<div id="swiper">
+		<img src="img/swiper.png">
+	</div>
+	<div id="icons">
+		<dl>
+			<img src="img/icon1.png">
+			<p>最后疯抢</p>
+		</dl>
+		<dl>
+			<img src="img/icon2.png">
+			<p>9.9包邮</p>
+		</dl>
+		<dl>
+			<img src="img/icon3.png">
+			<p>拼团</p>
+		</dl>
+		<dl>
+			<img src="img/icon4.png">
+			<p>即将上线</p>
+		</dl>
+	</div>
+	<div id="star">
+		<div><img src="http://s2.juancdn.com/bao/160918/e/3/57de3e43151ad1e14d8b4585_375x456.jpg?iopcmd=convert&Q=88&dst=jpg"></div>
+		<div><img src="http://s2.juancdn.com/bao/160905/3/8/57cd27e5151ad1637e8b45ab_375x228.jpg?iopcmd=convert&Q=88&dst=jpg"></div>
+		<div><img src="http://s2.juancdn.com/bao/160912/9/a/57d614b9151ad1b02e8b4597_375x228.jpg?iopcmd=convert&Q=88&dst=jpg"></div>
+	</div>
+	<div id='mid_tip'><img src='http://s2.juancdn.com/bao/160914/5/7/57d919dd151ad13b3b8b45dc_750x90.jpg?iopcmd=convert&Q=88&dst=jpg'></div>
+	<!-- angular -->
+	<div id='indexDetailAngular' ng-controller='indexcon'>
+		<dl ng-repeat='obj in arr'>
+			<dt><img ng-src="{{obj.pic}}"></dt>
+			<dd>{{obj.title}}<span>{{obj.class}}</span></dd>
+			<p>{{obj.name}}</p>
+		</dl>
+	</div>
+	<br><br><br><br>
 </body>
 </html>

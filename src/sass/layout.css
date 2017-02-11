@@ -1,0 +1,8 @@
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; list-style-type: none; border: 1px solid black; }
+
+html { width: 100%; font-size: 100px; }
+
+body { width: 100%; font-size: 14px; display: flex; flex-direction: column; justify-content: center; background-color: lightcoral; }
+body header { line-height: 2.6em; display: flex; flex-direction: row; justify-content: center; align-items: center; }
+body section { width: 100%; }
+body section article.swiper { width: 100%; min-height: 3rem; background: green; }

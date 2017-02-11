@@ -1,0 +1,1 @@
+angular.module("globalApp",[]).constant("globalDataUrl","http://localhost:2046/global/").controller("topLevelCtrl",["$scope",function(a){}]).controller("swiperCtrl",["$scope","$http","globalDataUrl",function(a,t,l){a.swiperData={banner_ads:[]},t.get(l+"0").then(function(t){console.log(t.data.data.banner_ads),a.swiperData.banner_ads=t.data.data.banner_ads})}]);
